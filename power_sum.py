@@ -9,7 +9,8 @@ which represents how far nested it is. For e.g. [2,3,[4,1,2]] = 2+3+ (4+1+2)^2
 
 another example - [1,2,[7,[3,4],2]] = 1 + 2 +( 7+(3+4)^3+2)^2
 """
-
+# TC-O(N), SC-O(d)
+# N-total number of elements in a list also consider list ele to :: d-highest power depth [1, [[2]]] d=3 
 def power_sum(arr):
     pow=1
     

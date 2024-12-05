@@ -161,3 +161,5 @@ def comb_sum3(n, k): #n=length limit for an combination arr, k=target value when
 
 print(comb_sum3(3, 6))
 
+
+# nCk n=total number in a arr, k=number of ele that choose from the n ele and k=n
