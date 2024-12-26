@@ -49,7 +49,7 @@ Output :
 
 def permutation2(arr):
     res=[]
-    n=len(0)
+    n=len(arr)
 
     def helper(index):
 
@@ -58,11 +58,15 @@ def permutation2(arr):
             return
         hash={}
         for i in range(index, n):
+            
+            if arr[i] not in hash:
+                hash[arr[i]]=True
 
-            hash[arr[i]]==
-
-
+                arr[index], arr[i]=arr[i], arr[index]
+                helper(index+1)
+                arr[index], arr[i]=arr[i], arr[index]
 
     helper(0)
     return res
-
+nums = [3,3,2]
+print(permutation2(nums))

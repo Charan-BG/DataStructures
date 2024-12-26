@@ -245,4 +245,3 @@ def sudoku(board):
 print(sudoku(board))
 
 
-    
