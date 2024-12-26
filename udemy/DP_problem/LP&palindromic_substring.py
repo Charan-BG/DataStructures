@@ -42,11 +42,11 @@ def palindromicSubstring(s:str)->int:
 
     return res
 
-print(palindromicSubstring("pqrp"))
-print(palindromicSubstring("a"))
-print(palindromicSubstring("abcd"))
-print(palindromicSubstring("aba"))
-print(palindromicSubstring("abaa"))
+# print(palindromicSubstring("pqrp"))
+# print(palindromicSubstring("a"))
+# print(palindromicSubstring("abcd"))
+# print(palindromicSubstring("aba"))
+# print(palindromicSubstring("abaa"))
 print(palindromicSubstring("pqestseqp"))
 
 
@@ -76,3 +76,36 @@ print(palindromicSubstring2("pqestseqp"))
 
 
 
+"""
+Coding Exercise: Longest Palindromic Substring
+Given a string s, return the longest  palindromic substring in s.
+
+Example :
+Input: s = "pabad"
+Output: "aba"
+"""
+
+def LongestPalindromicSubstring(s:str)->str:
+
+    n=len(s)
+    res=s[0]
+
+    dp=[[0]*n for _ in range(n)]
+
+    for l in range(1,n+1):
+        for i in range(0,n-l+1):
+            j=i+l-1
+
+            if i==j:
+                dp[i][j]=True                
+            elif s[i]==s[j] and (j==i+1 or dp[i+1][j-1]):
+                dp[i][j]=True
+            else:
+                dp[i][j]=False
+
+            if dp[i][j]:
+                res=s[i:j+1]
+
+    return res
+
+print(LongestPalindromicSubstring("pabad"))
