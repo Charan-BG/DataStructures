@@ -27,6 +27,8 @@ def subsets(arr):
 
 print(subsets([1,2,3]))
 print(subsets([1,1,2]))
+print(len(subsets(['a','a','b','a'])))
+
 
 
 """
@@ -66,4 +68,5 @@ def subset2(arr):
     return res
 
 print(subset2([1,1,2]))
+print(len(subset2(['a','a','b','a'])))
 
